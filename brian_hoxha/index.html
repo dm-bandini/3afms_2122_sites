@@ -1,7 +1,34 @@
  <html>
     
     <head>
-     <script type="text/javascript" src="script.js"></script>
+     <script type="text/javascript">
+     
+      function calcola_eta() {
+
+        var birthYear = document.getElementById("anno_nascita").value; // LEGGO DAL HTML
+
+        var age = 2022 - birthYear; // CALCOLO
+
+        var risultato = document.getElementById("risultato"); // SCRIVO SULL'HTML 
+        risultato.value = age; 
+
+      }
+      
+ function calcola_media() {
+  
+  var v1 = document.getElementById("voto1").value;
+   var v2 = document.getElementById("voto2").value;
+    var v3 = document.getElementById("voto3").value;
+     var v4 = document.getElementById("voto4").value;
+      var v5 = document.getElementById("voto5").value;// LEGGO DAL HTML
+  
+  var media =(v1+v2+v3+v4+v5)/5; // CALCOLO
+  
+  var risultato = document.getElementById("risultato_media"); // SCRIVO SULL'HTML 
+  risultato.value = media; 
+
+}     
+     </script>
     </head>
 
     <body style="background-color:cyan;">
@@ -41,7 +68,17 @@
 
 
         <input id="anno_nascita" type="text">
-        <input id="calcola_eta" type="button" value="Calcola" onclick="get_age()">
+        <input id="calcola_eta" type="button" value="Calcola" onclick="calcola_eta()">
         <input id="risultato" type="text">
+		<br>
+
+<input id="voto1" type="text">
+<input id="voto2" type="text">
+<input id="voto3" type="text">
+<input id="voto4" type="text">
+<input id="voto5" type="text">
+ <input id="calcola_media" type="button" value="Calcola" onclick="calcola_media()">
+        <input id="risultato_media" type="text">
+        
     </body>
 </html>
